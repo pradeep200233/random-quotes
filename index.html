@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+     <button onclick="danger(),quote()">click me</button>
+    <h1 id="ms"></h1>
+    <script>
+      function quote() {
+        let arr = [
+          "The best way to get started is to quit talking and begin doing. - Walt Disney",
+          "The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty. - Winston Churchill",
+          "Don't let yesterday take up too much of today. - Will Rogers",
+          "You learn more from failure than from success. Don't let it stop you. Failure builds character. - Unknown",
+          "It's not whether you get knocked down, it's whether you get up. - Vince Lombardi",
+          "It's not whether you get knocked down, it's whether you get up. - Vince Lombardi",
+          "It's not whether you get knocked down, it's whether you get up. - Vince Lombardi",
+          "It's not whether you get knocked down, it's whether you get up. - Vince Lombardi",
+          "The best way to get started is to quit talking and begin doing. - Walt Disney",
+          "The best way to get started is to quit talking and begin doing. - Walt Disney",
+          "The best way to get started is to quit talking and begin doing. - Walt Disney"
+        ];
+        arr = arr[Math.floor(Math.random() * 9)];
+        let ms = document.getElementById("ms");
+        ms.innerHTML = arr;
+      }
+      function color() {
+        let a = "0123456789ABCDEF";
+        let str1 = "#";
+        for (i = 0; i < 6; i++) {
+          str1 += a[Math.floor(Math.random() * 14)];
+        }
+        return str1;
+      }
+      function danger() {
+        document.body.style.backgroundColor = color();
+      }
+    </script>
+  </body>
+</html>
